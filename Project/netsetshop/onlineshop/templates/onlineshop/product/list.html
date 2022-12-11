@@ -1,4 +1,4 @@
-{% extedn "onlinshop/base.html"%}
+{% extends "onlinshop/base.html"%}
 {% load static %}
 {% block title%}
 {% if category%} {{% category.name%}}{%else%}Products{% endif %}
@@ -9,7 +9,7 @@
     <ul>
         <li {% if not category%} class="selected "{%endif%}>
 
-            <a href="{% url " onlineshop:product_list" %}">All</a>
+            <a href="{% url " onlineshop:product_list "%}">All</a>
         </li>
         {% for c in categories %}
         <li {% if  category.slug == c.slug %}class="selected "{%endif%}>
@@ -26,7 +26,7 @@
         {% for product in product%}
         <div class="item">
             <a href="product.get_absolute_url">
-            <img src="{% if product.image%}{{product.image.url}}{%else%}{%static" img/imge.png" %}" {%endif%} >
+            <img src="{% if product.image%}{{product.image.url}}{%else%}{%static 'img/imge.png' %}" {%endif%} >
             </a>
             <a href="{{product.get_absolute_url}}">{{product.name}}</a>
             <br>
