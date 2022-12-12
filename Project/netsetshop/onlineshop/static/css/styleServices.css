@@ -1,0 +1,47 @@
+.servicesPage{
+	padding-bottom: 50px;
+}
+
+.titleHeader h1{
+    color: aqua;
+    text-align: center;
+    padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.titleHeader h3{
+    color: rgb(222,230,236);
+    text-align: center;
+    padding-top: 10px;
+	margin-bottom: 40px;
+}
+
+.servicesContent{
+    background-color: white;
+    border-radius: 14px;
+    padding-top: 40px;
+    width: 90%;
+    margin-left: 80px;
+}
+
+.column{
+    float: left;
+    width: 33%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.column h3{
+    color: aqua;
+}
+
+.column p{
+    padding-top: 5px;
+    color: black;
+}
+
+.column .material-symbols-outlined{
+    font-size: 60px;
+    padding-bottom: 15px;
+    color: goldenrod;
+}

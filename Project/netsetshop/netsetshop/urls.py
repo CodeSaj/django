@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import gettext_lazy as _
+ 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('onlineshop.urls', namespace = 'onlineshop')),
+    path('cart/', include('cart.urls', namespace = 'cart')),
+    path('onlineshop/', include('onlineshop.urls', namespace = 'onlineshop')),
+    path('', include('onlineshop.urls', namespace = 'home')),
+
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL,

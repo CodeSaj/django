@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link rel="stylesheet" href= "style.css">
+        <link rel="stylesheet" href= "styleCart.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">SPARK </h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li> <a href="news.html">NEWS</a></li>
+                        <li><a href="contactUs.html">CONTACT</a></li>
+                        <li><a href="AboutUs.html">ABOUT</a></li>
+                        <li><a href="shoppingCart.html">CART</a></li>       
+                    </ul>
+                </div>
+                <div class="search">
+                    <form action="search.html">
+                        <input class = "searchbtn" type="text" placeholder="Search.." name="search">
+                        <a href="#"><button class = "submitbtn" type="submit">Submit</button></a>
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <div class="shoppingPage">
+                    <div class="titleHeader">
+                        <h1>Shopping Cart</h1>
+                    </div>
+                    <div class="cartContent">
+                        <div class="row">
+                            <div class="column1">
+                                <img src="Images/Devices/pic1.jpg">
+                                <br>
+                                <img src="Images/Devices/pic4.jpg">
+                                <br>
+                                <img src="Images/Devices/pic11.jpg">
+                            </div>
+                            <div class="column2">
+                                <div class="productName">
+                                    <a class="itemName" href="productDetails.html">iPhone</a>
+                                    <div class="productInfo">
+                                        <div>Display: <span class="value">5.6 inches</span></div>
+                                        <div>RAM: <span class="value">6 GB</span></div>
+                                        <div>Memory: <span class="value">512 GB</span></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="productName">
+                                    <a class="itemName" href="productDetails.html">Huawei</a>
+                                    <div class="productInfo">
+                                        <div>Display: <span class="value">14.8 inches</span></div>
+                                        <div>RAM: <span class="value">16 GB</span></div>
+                                        <div>Memory: <span class="value">1 TB</span></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="productName">
+                                    <a class="itemName" href="productDetails.html">Laptop</a>
+                                    <div class="productInfo">
+                                        <div>Display: <span class="value">13.2 inches</span></div>
+                                        <div>RAM: <span class="value">8 GB</span></div>
+                                        <div>Memory: <span class="value">512 GB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column3">
+                                <div class="quantity">
+                                    <label for="quantity">Quantity:</label>
+                                    <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+                                </div>
+                                <br>
+                                <div class="quantity">
+                                    <label for="quantity">Quantity:</label>
+                                    <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+                                </div>
+                                <br>
+                                <div class="quantity">
+                                    <label for="quantity">Quantity:</label>
+                                    <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+                                </div>
+                            </div>
+                            <div class="column4">
+                                <div class="displayPrice">
+                                    <span>$999</span>
+                                </div>
+                                <br>
+                                <div class="displayPrice">
+                                    <span>$1300</span>
+                                </div>
+                                <br>
+                                <div class="displayPrice">
+                                    <span>$999</span>
+                                </div>
+                            </div>
+                            <div class="column5">
+                                <div class="summary">
+                                    <h3>Summary</h3>
+                                    <div>
+                                        <form>
+                                            <div><label>Have a coupon?</label>
+                                                <div class="couponCode">
+                                                    <input type="text" class="coupon" placeholder="Coupon code">
+                                                    <span><button class="apply">Apply</button></span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="summaryItem"><span class="text">Subtotal</span><span class="price">$3298</span></div>
+                                    <div class="summaryItem"><span class="text">Discount</span><span class="price">$0.00</span></div>
+                                    <div class="summaryItem"><span class="text">Shipping</span><span class="price">$5.95</span></div>
+                                    <div class="summaryItem"><span class="text">Sales Tax</span><span class="price">TBD</span></div>
+                                    <div class="summaryItem"><span class="text">Total</span><span class="price">$3303.95</span></div>
+                                    <a href="Checkout.html"><button type="button" class="checkoutButton">Checkout</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <style>
+          footer {
+            text-align: center;
+			padding: 5px;
+            background-image: linear-gradient(to right, rgba(0, 132, 121, 0), rgb(67, 145, 123));
+			color: rgba(255, 255, 255, 0.178);
+			font-style:normal; 
+			
+        }
+        </style>
+      
+      
+        
+        <footer>
+          <p style="color: rgb(38, 37, 44);">SPARK<br>
+            <b>For Any Complain Contact Our Co Founder Directly :</b> <a href="https://www.linkedin.com/in/saja-a/"><i class="fa fa-linkedin"></i></a>	<br>
+          <a href="mailto:hege@example.com"> &copy; Copyright 2022 HTML.am</a></p>
+        </footer>
+         
+    </body>
+</html>

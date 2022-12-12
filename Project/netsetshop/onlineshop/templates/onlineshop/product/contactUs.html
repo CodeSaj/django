@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel= "stylesheet" href= "style.css"> <!--style will get applied proparly-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+input[type=text1], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(24, 196, 173);
+  color: black;
+  padding: 12px 20px;
+  border: 2px solid rgb(79, 230, 179);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(22, 80, 80);
+}
+
+   
+footer {
+    text-align: center;
+padding: 5px;
+    background-image: linear-gradient(to right, rgba(0, 132, 121, 0), rgb(67, 145, 123));
+color: rgba(255, 255, 255, 0.178);
+font-style:normal; 
+
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+            <div class="navbar">
+                    <div class="icon">
+                        <h2 class="logo">SPARK </h2>
+                    </div>
+                       <div class="menu">
+                            <ul>
+
+                                <li><a href="home.html">HOME</a></li>
+                                <li> <a href="news.html">NEWS</a></li>
+                                <li><a class =active href="contactUs.html">CONTACT</a></li>
+                                <li><a href="AboutUs.html">ABOUT</a></li>
+                                <li><a href="shoppingCart.html">CART</a></li>
+                                
+                            </ul>
+                       </div>
+                       <div class="search">
+                        <form action="search.html">
+                            <input class = "searchbtn" type="text" placeholder="Search.." name="search">
+                            <a href="#"> <button class = "submitbtn" type="submit">Submit</button></a>
+                          </form>
+                       </div>
+            </div>
+			<br>
+			<h1 style="text-align:center; color:aqua;">Contact Us</h1>
+			<br><br>
+			<div class="Acontainer" style="background:white;">
+				<form action="ContactUsSent.html">
+				<label for="fname">First Name</label>
+				<input type="text1" id="fname" name="firstname" placeholder="Your first name..">
+				<br>
+				<label for="lname">Last Name</label>
+				<input type="text1" id="lname" name="lastname" placeholder="Your last name..">
+				<br>
+				<label for="country">Country</label>
+				<select id="country" name="country">
+				<option value="australia">Australia</option>
+				<option value="canada">Canada</option>
+				<option value="usa">USA</option>
+				</select>
+
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+				<input type="submit" value="Submit">
+				</form>
+			</div>
+	</div>
+
+ 
+
+
+<footer>
+  <p style="color: rgb(38, 37, 44);">SPARK<br>
+    <b>For Any Complain Contact Our Co Founder Directly :</b> <a href="https://www.linkedin.com/in/saja-a/"><i class="fa fa-linkedin"></i></a>	<br>
+  <a href="mailto:hege@example.com"> &copy; Copyright 2022 HTML.am</a></p>
+</footer>
+     
+</body>
+</html>

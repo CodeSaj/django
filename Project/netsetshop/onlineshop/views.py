@@ -1,9 +1,16 @@
 from django.shortcuts import render, get_object_or_404
 from.models import Category, Product
+from cart.forms import CartAddProductForm
+from django.http import HttpResponse
 
+def home(request):
+    return render(request, 'onlineshop/product/home.html')
+
+def AboutUs(request):
+    return render(request, 'AboutUs.html')
 # Create your views here.
 def product_list(request, category_slug=None):
-    category_slug = None
+    category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available = True)
 
@@ -13,11 +20,13 @@ def product_list(request, category_slug=None):
     return render(request, 'onlineshop/product/list.html',{
          'category': category,
         'categories': categories,
-        'products': products
+        'products':products,
         })
 
 def product_detail(request, id, slug):
     product= get_object_or_404(Product,id=id,slug=slug,available=True)
+    cart_product_form = CartAddProductForm()
     return render(request, 
     'onlineshop/product/detail.html',
-    {'product':product})
+    {'product':product,'cart_product_form':cart_product_form})
+

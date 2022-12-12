@@ -1,7 +1,7 @@
-{% extends "onlinshop/base.html"%}
+{% extends "onlineshop/base.html"%}
 {% load static %}
 {% block title%}
-{% if category%} {{% category.name%}}{%else%}Products{% endif %}
+{% if category%} {{ category.name}}{% else %}Products{% endif %}
 {% endblock %}
 {% block content%}
 <div class="sidebar">
@@ -9,10 +9,10 @@
     <ul>
         <li {% if not category%} class="selected "{%endif%}>
 
-            <a href="{% url " onlineshop:product_list "%}">All</a>
+            <a href="{% url 'onlineshop:product_list' %}">All</a>
         </li>
         {% for c in categories %}
-        <li {% if  category.slug == c.slug %}class="selected "{%endif%}>
+        <li {% if category.slug == c.slug %}class="selected "{% endif %}>
 
             <a href="{{ c.get_absolute_url}}">{{c.name}}</a>
         </li>
@@ -21,16 +21,16 @@
 </div>
 <div>
     <div id="main" class="product_list">
-        <h1 >{% if category%}{{category.name}}{%else%}Product{%endif%}</h1>
+        <h1 >{% if category %}{{category.name}}{% else %}Producst{%endif%}</h1>
         
         {% for product in product%}
         <div class="item">
-            <a href="product.get_absolute_url">
-            <img src="{% if product.image%}{{product.image.url}}{%else%}{%static 'img/imge.png' %}" {%endif%} >
+            <a href="{{product.get_absolute_url}}">
+            <img src="{% if product.image%}{{product.image.url}}{% else %}{% static "img/no_img.png" %} {% endif%}" >
             </a>
             <a href="{{product.get_absolute_url}}">{{product.name}}</a>
             <br>
-            ${{product.price}}
+            US Dollar{{product.price}}
 
         </div>
         {%endfor%}

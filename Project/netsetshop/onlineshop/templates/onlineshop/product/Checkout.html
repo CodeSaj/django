@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SPARK</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styleCart.css">
+        <link rel= "stylesheet" href="style.css"> <!--style will get applied proparly-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">SPARK </h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="contactUs.html">CONTACT</a></li>
+                        <li><a href="AboutUs.html">ABOUT</a></li>
+                        <li><a href="shoppingCart.html">CART</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form action="search.html">
+                        <input class = "searchbtn" type="text" placeholder="Search.." name="search">
+                        <a href="#"><button class = "submitbtn" type="submit">Submit</button></a>
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <div class="titleHeader">
+                    <h1>Checkout</h1>
+                </div>
+                <div class="row">
+                    <div class="columnBill">
+                        <div class="checkout">
+                            <div class="billingInfo">
+                                <h3>Billing Information</h3>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="column">
+                                            <label>First name</label>
+                                            <br>
+                                            <input type="text" id="firstName" placeholder="John" required>
+                                        </div>
+                                        <div class="column">
+                                            <label>Last name</label>
+                                            <br>
+                                            <input type="text" id="lastName" placeholder="Doe" required>
+                                        </div>
+                                    </div>
+                                    <div class="email">
+                                        <label>Email</label>
+                                        <br>
+                                        <input type="text" class="input" id="email" placeholder="you@email.com" required>
+                                    </div>
+                                    <div class="address">
+                                        <label>Address</label>
+                                        <br>
+                                        <input type="text" class="input" id="address" placeholder="1234 Main St" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="columnA">
+                                            <div class="country">
+                                                <label>Country</label>
+                                                <br>
+                                                <input type="text" class="inputCountry" id="country" placeholder="United States" required>
+                                            </div>
+                                        </div>
+                                        <div class="columnB">
+                                            <div class="State">
+                                                <label>State</label>
+                                                <br>
+                                                <input type="text" class="inputState" id="state" placeholder="CA" required>
+                                            </div>
+                                        </div>
+                                        <div class="columnB">
+                                            <div class="zip">
+                                                <label>Zip</label>
+                                                <br>
+                                                <input type="text" class="inputZip" id="firstName" placeholder="12345" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shippingAddress">
+                                        <input type="checkbox" class="shipAddress" id="sameAddress">
+                                        <label id="sameAddress">Shipping address is the same as my billing address</label>
+                                    </div>
+                                    <h3>Delivery method</h3>
+                                    <div class="delivery">
+                                        <input type="radio" name="payment" value="standard" checked>
+                                        <label>U.S. Standard</label>
+                                        <small class="priceDeliv1">$0.00</small><br>
+                                        <small>Currently 5-7 business days, unless otherwise noted.</small><br>
+                                        <input type="radio" name="payment" value="2Day">
+                                        <label>U.S. 2-Day Express</label>
+                                        <small class="priceDeliv2">+$10.55</small><br>
+                                        <small>2 business days if ordered by 10 AM PST.</small><br>
+                                        <input type="radio" name="payment" value="nextDay">
+                                        <label>U.S. Next Day Express</label>
+                                        <small class="priceDeliv3">+$15.55</small><br>
+                                        <small>Next business day if ordered by 10 AM PST.</small><br>
+                                    </div>
+                                    <h3>Payment</h3>
+                                    <div class="payment">
+                                        <input type="radio" name="payment" value="credit">
+                                        <label>Credit card</label><br>
+                                        <input type="radio" name="payment" value="debit">
+                                        <label>Debit card</label><br>
+                                        <input type="radio" name="payment" value="paypal">
+                                        <label>Paypal</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column">
+                                            <label>Name on card</label>
+                                            <br>
+                                            <input type="text" id="cardName" placeholder="John Doe" required>
+                                            <br>
+                                            <small class="cardDiscrip">Full name as displayed on card</small>
+                                        </div>
+                                        <div class="column">
+                                            <label>Card number</label>
+                                            <br>
+                                            <input type="text" class="cardNum" id="cardNumber" placeholder="1234567812345678" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="columnC">
+                                            <label>Expiration</label>
+                                            <br>
+                                            <input type="text" class="cardExp" id="cardExpiration" placeholder="01/27" required>
+                                        </div>
+                                        <div class="columnC">
+                                            <label>CVV</label>
+                                            <br>
+                                            <input type="text" class="cardCvv" id="cardCVV" placeholder="123" required>
+                                        </div>
+                                    </div>
+                                    <div class="backHome">
+                                        <a href="home.html"><button type="button" class="contShopping">Continue shopping</button></a>
+                                    </div>
+                                    <div class="order">
+                                        <a href="home.html"><button type="submit" id="order" class="cartOrder" onclick="alert('Your order has been placed.')">Order</button></a>
+                                    </div>
+                                </form>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="columnSummary">
+                        <div class="summary2">
+                            <h3>Summary</h3>
+                            <div class="summaryItem">
+                                <span class="text">Subtotal</span>
+                                <span class="price">$3298</span>
+                            </div>
+                            <div class="summaryItem">
+                                <span class="text">Discount</span>
+                                <span class="price">$0.00</span>
+                            </div>
+                            <div class="summaryItem">
+                                <span class="text">Shipping</span>
+                                <span class="price">$5.95</span>
+                            </div>
+                            <div class="summaryItem">
+                                <span class="text">Sales Tax</span>
+                                <span class="price">$263.84</span>
+                            </div>
+                            <div class="summaryItem">
+                                <span class="text">Total</span>
+                                <span class="price">$3567.79</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-5 mb-3 text-muted" style="color:black; text-align:center">&copy; 2017–2022</p>
+        </div>
+    </body>
+    
+    <style>
+         footer {
+            text-align: center;
+			padding: 5px;
+            background-image: linear-gradient(to right, rgba(0, 132, 121, 0), rgb(67, 145, 123));
+			color: rgba(255, 255, 255, 0.178);
+			font-style:normal; 
+			
+        }
+        </style>
+      
+      
+        
+        <footer>
+          <p style="color: rgb(38, 37, 44);">SPARK<br>
+            <b>For Any Complain Contact Our Co Founder Directly :</b> <a href="https://www.linkedin.com/in/saja-a/"><i class="fa fa-linkedin"></i></a>	<br>
+          <a href="mailto:hege@example.com"> &copy; Copyright 2022 HTML.am</a></p>
+        </footer>
+         
+</html>
